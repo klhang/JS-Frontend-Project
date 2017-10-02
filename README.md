@@ -4,13 +4,13 @@
 
 ### Background
 
-The Stock Performance Heatmap tracks the movement of the 500 component stocks in the technology sector which makeup the XLK Sector SPDRs ETFs. It is a graphical representation where the individual values contained in the matrix are represented as colors. Green showing positive change and red showing negative.
+The Stock Performance Heatmap tracks the movement of the component stocks in the technology sector which makeup the XLK Sector SPDRs ETFs. It is a graphical representation where the individual values contained in the matrix are represented as colors. Green showing positive change and red showing negative.
 
 ### Functionality & MVP  
 
 With this Stock Performance Heatmap, users will be able to:
 
-- [ ] see the rough index weight of different stocks of the sector on the map
+- [ ] see the rough index weight of different stocks in the sector
 - [ ] see the daily percentage change in value of a stock when hovered over
 - [ ] get more detail info of the stock when click into one specific stock
 
@@ -22,7 +22,7 @@ In addition, this project will include:
 
 This app will consist of a single screen with the Heatmap, and nav links to the Github, my LinkedIn.
 
-Above the Heatmap, there will be a indication bar showing the indication color of daily value change of a stock.
+Above the Heatmap, there will be an indication bar showing the indication colors of daily value change of a stock, from deep red to deep green.
 In the Heatmap, the spaces for stocks are divided by its market cap in the sector.
 
 ![wireframes](https://github.com/klhang/JS-Frontend-Project/blob/master/images/WireFrame%20Screen%20Shot.png)
@@ -31,13 +31,10 @@ In the Heatmap, the spaces for stocks are divided by its market cap in the secto
 
 This project will be implemented with the following technologies:
 
-- Alpha Vantage APIs for dai stock performance data,
-- Vanilla JavaScript and `jquery` for overall structure and game logic,
+- Alpha Vantage APIs for daily stock performance data,
+- Vanilla JavaScript and `jquery` for overall structure and logic,
 - `D3.js` for DOM manipulation and rendering,
 - Webpack to bundle and serve up the various scripts.
-
-In addition to the webpack entry file, there will be three scripts involved in this project:
-
 
 ### Implementation Timeline
 
@@ -47,7 +44,7 @@ In addition to the webpack entry file, there will be three scripts involved in t
 - Get a green bundle with `webpack`
 - Learn enough `D3.js` to render an object
 
-**Day 2**: Dedicate this day to learning the how to connect to Alpha Vantage APIs. Goals for the day:
+**Day 2**: Dedicate this day to learning how to connect to Alpha Vantage APIs. Goals for the day:
 
 - Learn enough about the Alpha Vantage APIs
 - Having the data from Alpha Vantage rendered in the Heatmap.
