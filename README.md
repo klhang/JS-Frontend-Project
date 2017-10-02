@@ -61,3 +61,4 @@ This project will be implemented with the following technologies:
 
 ### Bonus features
 - [ ] Besides daily performance, users can select the timeframe of the Heatmap to see the weekly, monthly, and annual performance of the stocks.
+![wireframes](https://github.com/klhang/JS-Frontend-Project/blob/master/images/Time%20Frames.png)
