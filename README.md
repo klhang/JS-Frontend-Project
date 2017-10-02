@@ -25,7 +25,7 @@ This app will consist of a single screen with the Heatmap, and nav links to the 
 Above the Heatmap, there will be a indication bar showing the indication color of daily value change of a stock.
 In the Heatmap, the spaces for stocks are divided by its market cap in the sector.
 
-![wireframes](images/js_wireframe.jpeg)
+![wireframes](https://github.com/klhang/JS-Frontend-Project/blob/master/images/WireFrame%20Screen%20Shot.png)
 
 ### Architecture and Technologies
 
@@ -63,9 +63,4 @@ In addition to the webpack entry file, there will be three scripts involved in t
 
 
 ### Bonus features
-
-There are many directions this cellular automata engine could eventually go.  Some anticipated updates are:
-
-- [ ] Add options for different rule sets
-- [ ] Add multiple choices for starting states that are interesting
-- [ ] Explore multi-state versions of the game, such as the ones outlined [here](https://cs.stanford.edu/people/eroberts/courses/soco/projects/2008-09/modeling-natural-systems/gameOfLife2.html)
+- [ ] Besides daily performance, users can select the timeframe of the Heatmap to see the weekly, monthly, and annual performance of the stocks.
