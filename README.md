@@ -1,1 +1,71 @@
 # JS-Frontend-Project
+
+## Stock Performance Heatmap
+
+### Background
+
+The Stock Performance Heatmap tracks the movement of the 500 component stocks in the technology sector which makeup the XLK Sector SPDRs ETFs. It is a graphical representation where the individual values contained in the matrix are represented as colors. Green showing positive change and red showing negative.
+
+### Functionality & MVP  
+
+With this Stock Performance Heatmap, users will be able to:
+
+- [ ] see the rough index weight of different stocks of the sector on the map
+- [ ] see the daily percentage change in value of a stock when hovered over
+- [ ] get more detail info of the stock when click into one specific stock
+
+In addition, this project will include:
+
+- [ ] A production Readme
+
+### Wireframes
+
+This app will consist of a single screen with the Heatmap, and nav links to the Github, my LinkedIn.
+
+Above the Heatmap, there will be a indication bar showing the indication color of daily value change of a stock.
+In the Heatmap, the spaces for stocks are divided by its market cap in the sector.
+
+![wireframes](images/js_wireframe.jpeg)
+
+### Architecture and Technologies
+
+This project will be implemented with the following technologies:
+
+- Alpha Vantage APIs for dai stock performance data,
+- Vanilla JavaScript and `jquery` for overall structure and game logic,
+- `D3.js` for DOM manipulation and rendering,
+- Webpack to bundle and serve up the various scripts.
+
+In addition to the webpack entry file, there will be three scripts involved in this project:
+
+
+### Implementation Timeline
+
+**Day 1**: Setup all necessary Node modules, including getting webpack up and running.  Create `webpack.config.js` as well as `package.json`.  Learn the basics of `D3.js`.  Goals for the day:
+
+- Discuss with TA to finalize the project plan and figure out the exact technologies involved
+- Get a green bundle with `webpack`
+- Learn enough `D3.js` to render an object
+
+**Day 2**: Dedicate this day to learning the how to connect to Alpha Vantage APIs. Goals for the day:
+
+- Learn enough about the Alpha Vantage APIs
+- Having the data from Alpha Vantage rendered in the Heatmap.
+
+**Day 3**: Not Sure
+
+- N/a
+
+
+**Day 4**: Not Sure
+
+- N/a
+
+
+### Bonus features
+
+There are many directions this cellular automata engine could eventually go.  Some anticipated updates are:
+
+- [ ] Add options for different rule sets
+- [ ] Add multiple choices for starting states that are interesting
+- [ ] Explore multi-state versions of the game, such as the ones outlined [here](https://cs.stanford.edu/people/eroberts/courses/soco/projects/2008-09/modeling-natural-systems/gameOfLife2.html)
