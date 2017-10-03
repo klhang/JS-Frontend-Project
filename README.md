@@ -51,12 +51,12 @@ This project will be implemented with the following technologies:
 
 **Day 3**: Not Sure
 
-- N/a
+- Having the functional skeleton of the project
 
 
 **Day 4**: Not Sure
 
-- N/a
+- Seed the project with data from Alpha Vantage APIs
 
 
 ### Bonus features
