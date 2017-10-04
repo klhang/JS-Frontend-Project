@@ -1,15 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>D3 Test</title>
-        <script src="http://d3js.org/d3.v4.min.js"></script>
-        <link rel="stylesheet" href="index.css">
+<!doctype html>
+<html>
+<head>
+  <title>Stock Heatmap</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/bubble_chart.css">
+</head>
+  <body>
+    <div class="container">
+      <h1>Stock Performance</h1>
+      <div id="toolbar">
+        <a href="#" id="all" class="button active">Daily Change</a>
+        <a href="#" id="year" class="button">Weekly Accumulated Change</a>
+      </div>
+      <div id="vis"></div>
 
-    </head>
-    <body>
-        <div id="chart"></div>
-        <script type="text/javascript"></script>
-        <script src="index.js"></script>
-    </body>
+      <div class="footer">
+        <p>Daily Stock Performance of S&P Technology Sector</p>
+      </div>
+    </div>
+
+    <script src="//d3js.org/d3.v4.min.js"></script>
+    <script src="src/tooltip.js"></script>
+    <script src="src/bubble_chart.js"></script>
+
+
+  </body>
 </html>
