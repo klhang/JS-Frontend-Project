@@ -4,13 +4,12 @@
  *
  * Organization and style inspired by:
  * https://bost.ocks.org/mike/chart/
- * https://github.com/vlandham/bubble_chart_v4
  *
  */
 function bubbleChart() {
   // Constants for sizing
-  var width = 940;
-  var height = 600;
+  var width = 1800;
+  var height = 1000;
 
   // tooltip for mouseover functionality
   var tooltip = floatingTooltip('gates_tooltip', 240);
@@ -20,16 +19,16 @@ function bubbleChart() {
   var center = { x: width / 2, y: height / 2 };
 
   var yearCenters = {
-    "more than -3%": { x: width / 3, y: height / 2 },
-    "within -3% to 3%": { x: width / 2, y: height / 2 },
-    "more than 3%": { x: 2 * width / 3, y: height / 2 }
+    2008: { x: width / 3, y: height / 2 },
+    2009: { x: width / 2, y: height / 2 },
+    2010: { x: 2 * width / 3, y: height / 2 }
   };
 
   // X locations of the year titles.
   var yearsTitleX = {
-    "more than -3%": 160,
-    "within -3% to 3%": width / 2,
-    "more than 3%": width - 160
+    2008: 160,
+    2009: width / 2,
+    2010: width - 160
   };
 
   // @v4 strength to apply to the position forces
@@ -81,7 +80,7 @@ function bubbleChart() {
 
   /*
    * This data manipulation function takes the raw data from
-   * the CSV file and converts it into an array of node objects.
+   * the file and converts it into an array of node objects.
    * Each node will store data and visualization values to visualize
    * a bubble.
    *
@@ -106,15 +105,26 @@ function bubbleChart() {
     // Use map() to convert raw data into node data.
     // Checkout http://learnjsdata.com/ for more on
     // working with data.
+
+
+    // id: d.id,
+    // radius: radiusScale(+d.mkt_cap),
+    // value: +d.change,
+    // name: d.stock,
+    // org: d.sector,
+    // group: d.group(profit or not)
+    // year: d.start_year,
+
+
     var myNodes = rawData.map(function (d) {
       return {
         id: d.id,
         radius: radiusScale(+d.total_amount),
         value: +d.total_amount,
-        name: d.grant_title,
-        org: d.organization,
+        name: d.stock_ticker,
+        org: d.sector,
         group: d.group,
-        year: d.start_year,
+        year: d.weight,
         x: Math.random() * 900,
         y: Math.random() * 800
       };
@@ -378,8 +388,9 @@ function addCommas(nStr) {
   return x1 + x2;
 }
 
+
 // Load the data.
-d3.csv('data/gates_money.csv', display);
+d3.csv('data/test_e.csv', display);
 
 // setup the buttons.
 setupButtons();
