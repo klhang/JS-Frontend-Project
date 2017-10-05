@@ -34,7 +34,7 @@ a, a:visited, a:active {
   margin-top: 10px;
 }
 
-.percentage_change {
+.change {
   font-size: 21px;
   fill: #aaa;
   cursor: default;

@@ -8,8 +8,8 @@
  */
 function bubbleChart() {
   // Constants for sizing
-  var width = 1800;
-  var height = 1000;
+  var width = 1200;
+  var height = 700;
 
   // tooltip for mouseover functionality
   var tooltip = floatingTooltip('gates_tooltip', 240);
@@ -18,17 +18,17 @@ function bubbleChart() {
   // on which view mode is selected.
   var center = { x: width / 2, y: height / 2 };
 
-  var yearCenters = {
-    2008: { x: width / 3, y: height / 2 },
-    2009: { x: width / 2, y: height / 2 },
-    2010: { x: 2 * width / 3, y: height / 2 }
+  var changeCenters = {
+    "Down more than 2%": { x: width / 4, y: height / 2 },
+    "Normal Fluctuation": { x: width / 2, y: height / 2 },
+    "Up more than 2%": { x: 3 * width / 4, y: height / 2 }
   };
 
-  // X locations of the year titles.
-  var yearsTitleX = {
-    2008: 160,
-    2009: width / 2,
-    2010: width - 160
+  // X locations of the change titles.
+  var changesTitleX = {
+    "Down more than 2%": 250,
+    "Normal Fluctuation": width / 2,
+    "Up more than 2%": width - 250
   };
 
   // @v4 strength to apply to the position forces
@@ -113,7 +113,7 @@ function bubbleChart() {
     // name: d.stock,
     // org: d.sector,
     // group: d.group(profit or not)
-    // year: d.start_year,
+    // change: d.start_change,
 
 
     var myNodes = rawData.map(function (d) {
@@ -124,7 +124,8 @@ function bubbleChart() {
         name: d.stock_ticker,
         org: d.sector,
         group: d.group,
-        year: d.percentage,
+        change: d.percentage,
+        range: d.range,
         x: Math.random() * 900,
         y: Math.random() * 800
       };
@@ -209,22 +210,22 @@ function bubbleChart() {
   }
 
   /*
-   * Provides a x value for each node to be used with the split by year
+   * Provides a x value for each node to be used with the split by change
    * x force.
    */
-  function nodeYearPos(d) {
-    return yearCenters[d.year].x;
+  function nodechangePos(d) {
+    return changeCenters[d.range].x;
   }
 
 
   /*
    * Sets visualization in "single group mode".
-   * The year labels are hidden and the force layout
+   * The change labels are hidden and the force layout
    * tick function is set to move all nodes to the
    * center of the visualization.
    */
   function groupBubbles() {
-    hideYearTitles();
+    hidechangeTitles();
 
     // @v4 Reset the 'x' force to draw the bubbles to the center.
     simulation.force('x', d3.forceX().strength(forceStrength).x(center.x));
@@ -235,41 +236,41 @@ function bubbleChart() {
 
 
   /*
-   * Sets visualization in "split by year mode".
-   * The year labels are shown and the force layout
+   * Sets visualization in "split by change mode".
+   * The change labels are shown and the force layout
    * tick function is set to move nodes to the
-   * yearCenter of their data's year.
+   * changeCenter of their data's change.
    */
   function splitBubbles() {
-    showYearTitles();
+    showchangeTitles();
 
-    // @v4 Reset the 'x' force to draw the bubbles to their year centers
-    simulation.force('x', d3.forceX().strength(forceStrength).x(nodeYearPos));
+    // @v4 Reset the 'x' force to draw the bubbles to their change centers
+    simulation.force('x', d3.forceX().strength(forceStrength).x(nodechangePos));
 
     // @v4 We can reset the alpha value and restart the simulation
     simulation.alpha(1).restart();
   }
 
   /*
-   * Hides Year title displays.
+   * Hides change title displays.
    */
-  function hideYearTitles() {
-    svg.selectAll('.year').remove();
+  function hidechangeTitles() {
+    svg.selectAll('.change').remove();
   }
 
   /*
-   * Shows Year title displays.
+   * Shows change title displays.
    */
-  function showYearTitles() {
+  function showchangeTitles() {
     // Another way to do this would be to create
-    // the year texts once and then just hide them.
-    var yearsData = d3.keys(yearsTitleX);
-    var years = svg.selectAll('.year')
-      .data(yearsData);
+    // the change texts once and then just hide them.
+    var changesData = d3.keys(changesTitleX);
+    var changes = svg.selectAll('.change')
+      .data(changesData);
 
-    years.enter().append('text')
-      .attr('class', 'year')
-      .attr('x', function (d) { return yearsTitleX[d]; })
+    changes.enter().append('text')
+      .attr('class', 'change')
+      .attr('x', function (d) { return changesTitleX[d]; })
       .attr('y', 40)
       .attr('text-anchor', 'middle')
       .text(function (d) { return d; });
@@ -290,8 +291,8 @@ function bubbleChart() {
                   '<span class="name">Amount: </span><span class="value">$' +
                   addCommas(d.value) +
                   '</span><br/>' +
-                  '<span class="name">Percentage_Change: </span><span class="value">' +
-                  d.year +
+                  '<span class="name">Percentage Change: </span><span class="value">' +
+                  d.change +
                   '</span>';
 
     tooltip.showTooltip(content, d3.event);
@@ -311,12 +312,12 @@ function bubbleChart() {
   /*
    * Externally accessible function (this is attached to the
    * returned chart function). Allows the visualization to toggle
-   * between "single group" and "split by year" modes.
+   * between "single group" and "split by change" modes.
    *
-   * displayName is expected to be a string and either 'year' or 'all'.
+   * displayName is expected to be a string and either 'change' or 'all'.
    */
   chart.toggleDisplay = function (displayName) {
-    if (displayName === 'year') {
+    if (displayName === 'change') {
       splitBubbles();
     } else {
       groupBubbles();
@@ -390,7 +391,7 @@ function addCommas(nStr) {
 
 
 // Load the data.
-d3.csv('data/test_g.csv', display);
+d3.csv('data/test_k.csv', display);
 
 // setup the buttons.
 setupButtons();

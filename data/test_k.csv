@@ -1,0 +1,19 @@
+stock_ticker,id,sector,total_amount,group,percentage,range
+APPL,1,Technology,200000,down,-2.60%,Down more than 2%
+GOOGL,2,Technology,277270,down,-3.70%,Down more than 2%
+TSLA,3,Electrical (Alternative) Vehicles,360180,down,-4.80%,Down more than 2%
+GILD,4,Healthcare(BioTech),100000,flat,0.85%,Normal Fluctuation
+REGN,5,Healthcare(BioTech),100000,flat,1.00%,Normal Fluctuation
+XOM,6,Energy,400000,flat,1.15%,Normal Fluctuation
+CVX,7,Energy,600000,flat,1.30%,Normal Fluctuation
+TEVA,8,Healthcare(Pharmaceuticals),250000,flat,1.45%,Normal Fluctuation
+CELG,9,Healthcare(BioTech),180033,up,22.90%,Up more than 2%
+SPG,10,Real Estate Services,101363,up,4.10%,Up more than 2%
+JPM,11,Financials,504719,up,5.30%,Up more than 2%
+BAC,12,Financials,500000,up,6.50%,Up more than 2%
+GS,13,Financials,450000,down,-12.60%,Down more than 2%
+FB,14,Technology,300000,down,-8.70%,Down more than 2%
+AMZN,15,Cyclical Consumer Services,150000,down,-4.80%,Down more than 2%
+CBG,16,Real Estate Services,100000,flat,-0.32%,Normal Fluctuation
+DIS,17,Cyclical Consumer Services,243000,flat,-0.55%,Normal Fluctuation
+CMCSA,18,Cyclical Consumer Services,277270,flat,-0.78%,Normal Fluctuation
