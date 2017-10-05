@@ -1,28 +1,31 @@
 <!doctype html>
 <html>
 <head>
-  <title>Stock Heatmap</title>
+  <meta charset="utf-8">
+  <title>Bubble Chart v4 - vallandingham.me</title>
+  <meta name="description" content="Using D3v4 to create a Bubble chart. Based on NYT visualization">
+  <meta name="author" content="Jim Vallandingham">
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/bubble_chart.css">
 </head>
-  <body>
-    <div class="container">
-      <h1>Stock Performance</h1>
-      <div id="toolbar">
-        <a href="#" id="all" class="button active">Daily Change</a>
-        <a href="#" id="year" class="button">Weekly Accumulated Change</a>
-      </div>
-      <div id="vis"></div>
-
-      <div class="footer">
-        <p>Daily Stock Performance of S&P Technology Sector</p>
-      </div>
+<body>
+  <div class="container">
+    <h1>Stock Performance</h1>
+    <div id="toolbar">
+      <a href="#" id="all" class="button active">All Stocks in Portfolio</a>
+      <a href="#" id="percentage_change" class="button">Stocks By Daily Performance</a>
     </div>
-
-    <script src="//d3js.org/d3.v4.min.js"></script>
-    <script src="src/tooltip.js"></script>
-    <script src="src/bubble_chart.js"></script>
+    <div id="vis"></div>
 
 
-  </body>
+  </div>
+
+  <script src="//d3js.org/d3.v4.min.js"></script>
+  <script src="src/tooltip.js"></script>
+  <script src="src/bubble_chart.js"></script>
+
+
+</body>
 </html>

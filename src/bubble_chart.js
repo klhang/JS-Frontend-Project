@@ -74,7 +74,7 @@ function bubbleChart() {
   // Nice looking colors - no reason to buck the trend
   // @v4 scales now have a flattened naming scheme
   var fillColor = d3.scaleOrdinal()
-    .domain(['low', 'medium', 'high'])
+    .domain(['down', 'flat', 'up'])
     .range(['#d84b2a', '#beccae', '#7aa25c']);
 
 
@@ -124,7 +124,7 @@ function bubbleChart() {
         name: d.stock_ticker,
         org: d.sector,
         group: d.group,
-        year: d.weight,
+        year: d.percentage,
         x: Math.random() * 900,
         y: Math.random() * 800
       };
@@ -284,13 +284,13 @@ function bubbleChart() {
     // change outline to indicate hover state.
     d3.select(this).attr('stroke', 'black');
 
-    var content = '<span class="name">Title: </span><span class="value">' +
+    var content = '<span class="name">Stock: </span><span class="value">' +
                   d.name +
                   '</span><br/>' +
                   '<span class="name">Amount: </span><span class="value">$' +
                   addCommas(d.value) +
                   '</span><br/>' +
-                  '<span class="name">Year: </span><span class="value">' +
+                  '<span class="name">Percentage_Change: </span><span class="value">' +
                   d.year +
                   '</span>';
 
@@ -390,7 +390,7 @@ function addCommas(nStr) {
 
 
 // Load the data.
-d3.csv('data/test_e.csv', display);
+d3.csv('data/test_g.csv', display);
 
 // setup the buttons.
 setupButtons();
