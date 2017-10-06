@@ -25,5 +25,5 @@ This project is implemented with:
 
 - Vanilla JavaScript for overall structure and logic
 - `D3.js` for DOM manipulation and rendering
-- CSV file to save data
-- Python simplerHTTPServer for a light database
+- `CSV file` to save data
+- `Python simplerHTTPServer` for a light database
