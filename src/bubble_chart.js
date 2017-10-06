@@ -3,7 +3,7 @@
  * it in and a dataset to visualize.
  *
  * Organization and style inspired by:
- * https://bost.ocks.org/mike/chart/
+ * https://github.com/vlandham/bubble_chart_v4
  *
  */
 function bubbleChart() {
