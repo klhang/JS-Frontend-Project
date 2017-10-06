@@ -209,8 +209,11 @@ function bubbleChart() {
       '<span class="name">Stock: </span><span class="value">' +
       d.name +
       "</span><br/>" +
-      '<span class="name">Amount: </span><span class="value">$' +
+      '<span class="name">Market Value: </span><span class="value">$' +
       addCommas(d.value) +
+      "</span><br/>" +
+      '<span class="name">Sector: </span><span class="value">' +
+      d.org +
       "</span><br/>" +
       '<span class="name">Percentage Change: </span><span class="value">' +
       d.change +
@@ -276,6 +279,6 @@ function addCommas(nStr) {
   return x1 + x2;
 }
 
-d3.csv("data/test_k.csv", display);
+d3.csv("data/test_p.csv", display);
 
 setupButtons();
