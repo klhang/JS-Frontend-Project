@@ -5,7 +5,7 @@
 
 ### Background
 
-The Portfolio Heatmap tracks the movement of the stocks in the User's Portfolio. It is a graphical representation where the individual stocks are contained are represented in colors and size in bubbles, with colors showing positive or negative daily change in value and size show relative weight in the portfolio of the user.
+The Portfolio Heatmap tracks the movement of the stocks in the User's Portfolio. It is a graphical representation where the individual stocks are contained are represented in colors and size in bubbles, with colors showing positive or negative daily change in value and size showing relative weight in the portfolio of the user.
 
 ### Functionality & MVP  
 
