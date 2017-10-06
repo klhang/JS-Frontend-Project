@@ -12,8 +12,13 @@ The Portfolio Heatmap tracks the movement of the stocks in the User's Portfolio.
 With this Stock Performance Heatmap, users will be able to:
 
 - [ ] see the rough weight of different stocks in the users portfolio by the size of the bubbles
+![Home Page](https://github.com/klhang/JS-Frontend-Project/blob/master/Docs/Screen%20Shot%202017-10-06%20at%2010.27.15%20AM.png)
+
 - [ ] see more infos including the daily percentage change in value of a stock when hovered over
+![More Infos](https://github.com/klhang/JS-Frontend-Project/blob/master/Docs/Screen%20Shot%202017-10-06%20at%2010.28.25%20AM.png)
+
 - [ ] split the stock into groups when click into the Stock By Daily Performance mode.
+![Split by Performance](https://github.com/klhang/JS-Frontend-Project/blob/master/Docs/Screen%20Shot%202017-10-06%20at%2010.27.33%20AM.png)
 
 In addition, this project will include:
 
