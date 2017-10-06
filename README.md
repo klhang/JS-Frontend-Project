@@ -1,6 +1,7 @@
-# JS-Frontend-Project
+# StockHeatmap
 
-## Stock Performance Heatmap
+## Monitor Your Portfolio
+[https://stockheatmap.herokuapp.com](https://stockheatmap.herokuapp.com)
 
 ### Background
 
