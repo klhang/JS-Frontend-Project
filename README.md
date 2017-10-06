@@ -13,7 +13,7 @@ With this Stock Performance Heatmap, users will be able to:
 ![Home Page](https://github.com/klhang/JS-Frontend-Project/blob/master/Docs/Screen%20Shot%202017-10-06%20at%2010.27.15%20AM.png)
 
 2.see more infos including the sector, the amount invested, and the daily percentage change in value of the stock when hovered over
-![More Infos](https://github.com/klhang/JS-Frontend-Project/blob/master/Docs/Screen%20Shot%202017-10-06%20at%2010.28.25%20AM.png)
+![More Infos](https://github.com/klhang/Porfolio-Heatmap/blob/master/Docs/Screen%20Shot%202017-10-06%20at%2011.13.24%20AM.png)
 
 3.split the stock into different performance groups when get into the Stock By Daily Performance mode
 ![Split by Performance](https://github.com/klhang/JS-Frontend-Project/blob/master/Docs/Screen%20Shot%202017-10-06%20at%2010.27.33%20AM.png)
